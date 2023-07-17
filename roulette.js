@@ -1,3 +1,4 @@
+// const Swal = require("sweetalert2");
 var data = defaultItems;
 
 var RouletteWheel = function (el, items) {
@@ -173,10 +174,18 @@ $(window).ready(function () {
   // spinner.on("spin:start", function (r) {
   //   console.log("spin start!");
   // });
-  // spinner.on("spin:end", function (r) {
-  //   console.log("spin end! -->" + r._index);
-
-  //   var index = $("[data-index]");
-  //   console.log(data);
-  // });
+  spinner.on("spin:end", function (r) {
+    console.log("spin end! -->" + r._index);
+    console.log(data[r._index]);
+    Swal.fire({
+      position: "center",
+      icon: data[r._index].type === "replay" ? "warning" : "success",
+      title:
+        data[r._index].type === "replay"
+          ? "Gire outra vez!"
+          : `Você ganhou um(a) ${data[r._index].text}!`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  });
 });

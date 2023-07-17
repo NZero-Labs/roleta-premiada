@@ -148,9 +148,10 @@ body {
 .roulette .spinner .item .label .text {
   font-size: 0.6em;
   white-space: initial;
-  width: 1em;
+  width: 2.5rem;
   text-align: center;
   line-height: 1.2;
+  word-wrap: break-word;
 }
 .roulette .spinner .item .label i {
   font-size: 12px;
