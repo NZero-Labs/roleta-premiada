@@ -68,7 +68,12 @@ RouletteWheel.prototype.render = function () {
   for (var i = 0; i < count; i++) {
     var item = this.items[i];
 
-    var color = item.type !== "replay" ? colors[i % colors.length] : "#ffc000";
+    var color =
+      item.type !== "replay"
+        ? item.type !== "end"
+          ? colors[i % colors.length]
+          : "#9d9c9c"
+        : "#ffc000";
     var text = item.text;
     var ikon = item.ikon;
 
@@ -77,7 +82,7 @@ RouletteWheel.prototype.render = function () {
     html.push('data-index="' + i + '" ');
     html.push('data-type="' + item.type + '" ');
     html.push(">");
-    html.push('<span class="label">');
+    html.push('<span class="label flex flex-col gap-2">');
     if (ikon) html.push('<i class="material-icons">' + ikon + "</i>");
     html.push('<span class="text">' + text + "</span>");
     html.push("</span>");
@@ -176,13 +181,20 @@ $(window).ready(function () {
   spinner.on("spin:end", function (r) {
     Swal.fire({
       position: "center",
-      icon: data[r._index].type === "replay" ? "warning" : "success",
+      icon:
+        data[r._index].type === "replay"
+          ? "warning"
+          : data[r._index].type === "end"
+          ? "error"
+          : "success",
       title:
         data[r._index].type === "replay"
           ? "Gire outra vez!"
+          : data[r._index].type === "end"
+          ? "Não foi dessa vez!"
           : `Você ganhou um(a) ${data[r._index].text}!`,
       showConfirmButton: true,
-      timer: 5000,
+      timer: 9000000000,
     });
   });
 });

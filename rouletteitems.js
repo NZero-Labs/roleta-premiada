@@ -3,6 +3,10 @@ let defaultItems = [
     text: "text",
   },
   {
+    type: "end",
+    text: "Não foi dessa vez",
+  },
+  {
     type: "replay",
     text: "Jogue Novamente",
     ikon: "replay",
@@ -47,7 +51,7 @@ function setItems() {
   removeInputsChangeListener();
   for (let index = 0; index < defaultItems.length; index++) {
     const item = defaultItems[index];
-    if (item.type === "replay") continue;
+    if (item.type === "replay" || item.type === "end") continue;
     const itemDiv = `
     <div class="sm:col-span-full flex justify-between w-full gap-2">
       <div class="w-full">
