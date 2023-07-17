@@ -181,8 +181,8 @@ $(window).ready(function () {
         data[r._index].type === "replay"
           ? "Gire outra vez!"
           : `Você ganhou um(a) ${data[r._index].text}!`,
-      showConfirmButton: false,
-      timer: 1500,
+      showConfirmButton: true,
+      timer: 5000,
     });
   });
 });
