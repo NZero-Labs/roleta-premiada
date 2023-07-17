@@ -142,23 +142,13 @@ body {
 }
 
 /* CUSTOM LABELS */
-.roulette .spinner .item[data-type="quiz"] .label {
-  font-size: 1.5em;
-}
-.roulette .spinner .item[data-type="question"] .label {
-  font-size: 1.3em;
-  font-weight: 600;
-}
-.roulette .spinner .item[data-type="replay"] .label .text {
+.roulette .spinner .item .label .text {
   font-size: 0.6em;
   white-space: initial;
   width: 1em;
   text-align: center;
   line-height: 1.2;
 }
-.roulette .spinner .item[data-type="replay"] .label i {
-  font-size: 1.5em;
-}
-.roulette .spinner .item[data-type="time"] .label i {
-  font-size: 1.5em;
+.roulette .spinner .item .label i {
+  font-size: 12px;
 }
