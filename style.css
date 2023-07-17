@@ -126,6 +126,9 @@ body {
   text-align: center;
   transition: transform 0.15s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .roulette .button:hover {
   color: inherit;

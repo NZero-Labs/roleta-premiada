@@ -28,14 +28,16 @@ function addInputsChangeListener() {
   const inputs = $(".inputs-awards");
   for (let index = 0; index < inputs.length; index++) {
     const input = inputs[index];
-    input?.addEventListener("keydown", callbackInputChange);
+    input?.addEventListener("keyup", callbackInputChange);
+    input?.addEventListener("change", callbackInputChange);
   }
 }
 function removeInputsChangeListener() {
   const inputs = $(".inputs-awards");
   for (let index = 0; index < inputs.length; index++) {
     const input = inputs[index];
-    input?.removeEventListener("keydown", callbackInputChange);
+    input?.removeEventListener("keyup", callbackInputChange);
+    input?.removeEventListener("change", callbackInputChange);
   }
 }
 
