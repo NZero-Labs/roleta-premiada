@@ -82,7 +82,7 @@ RouletteWheel.prototype.render = function () {
     html.push('data-index="' + i + '" ');
     html.push('data-type="' + item.type + '" ');
     html.push(">");
-    html.push('<span class="label flex flex-col gap-2">');
+    html.push('<span class="label">');
     if (ikon) html.push('<i class="material-icons">' + ikon + "</i>");
     html.push('<span class="text">' + text + "</span>");
     html.push("</span>");
@@ -108,7 +108,7 @@ RouletteWheel.prototype.render = function () {
       //transform: 'translateX('+ (textHeight) +'px) translateY('+  (-1 * R) +'px) rotateZ('+ (90 + delta*.5) +'deg)',
       transform:
         "translateY(" +
-        (D * -0.25 + 10) +
+        D * -0.25 +
         "px) translateX(" +
         textHeight * 1.03 +
         "px) rotateZ(" +
@@ -194,7 +194,7 @@ $(window).ready(function () {
           ? "Não foi dessa vez!"
           : `Você ganhou um(a) ${data[r._index].text}!`,
       showConfirmButton: true,
-      timer: 9000000000,
+      timer: 5000,
     });
   });
 });
