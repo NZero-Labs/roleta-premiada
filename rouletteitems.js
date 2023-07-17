@@ -70,7 +70,7 @@ function setItems() {
       }
      
       ${
-        index === defaultItems.length - 2
+        index === defaultItems.length - 3
           ? `
       <button onclick="handleAddButton()" type="button" 
         class="rounded-md bg-indigo-600 p-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="material-icons">add</i></button>`
@@ -88,7 +88,7 @@ function handleDeleteButton(index) {
   setItems();
 }
 function handleAddButton() {
-  defaultItems.splice(defaultItems.length - 1, 0, defaultItem);
+  defaultItems.splice(defaultItems.length - 2, 0, defaultItem);
   setItems();
 }
 getItems();
