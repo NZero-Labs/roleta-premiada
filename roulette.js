@@ -1,5 +1,4 @@
 var data = defaultItems;
-console.log("🚀 ~ file: roulette.js:4 ~ defaultItems:", defaultItems);
 
 var RouletteWheel = function (el, items) {
   this.$el = $(el);

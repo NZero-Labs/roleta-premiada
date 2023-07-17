@@ -25,10 +25,24 @@
       <img src="full_logo.png" alt="Logo Amara Nzero">
     </div>
   </div>
-  <button onclick="handleToggleModalForm()" type="button"
-    className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-    Alterar
-  </button>
+  <div class="flex flex-col justify-start gap-2 items-start p-2">
+    <button onclick="handleToggleModalForm()" type="button"
+      class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+      Alterar
+    </button>
+    <label for="file-upload"
+      class="cursor-pointer rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+      <i class="material-icons text-xs">upload
+      </i>
+      Importar Config
+      <input id="file-upload" name="file-upload" type="file" class="sr-only">
+    </label>
+    <button onclick="fileDownloader()"
+      class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+      <i class="material-icons text-xs">download</i>
+      Exportar Config.
+    </button>
+  </div>
   <div id="modal-form" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <!--
     Background backdrop, show/hide based on modal state.
@@ -89,6 +103,7 @@
   <script src="modal.js"></script>
   <script src="rouletteitems.js"></script>
   <script src="roulette.js"></script>
+  <script src="import&export.js"></script>
 </body>
 
 </html>
