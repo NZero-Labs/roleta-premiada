@@ -59,7 +59,6 @@ RouletteWheel.prototype.spin = function (_index) {
 RouletteWheel.prototype.render = function () {
   var $spinner = $(this.$el.find(".spinner"));
   var D = this.$el.width();
-  console.log("🚀 ~ file: roulette.js:62 ~ D:", D);
   var R = D * 0.5;
 
   var count = this.items.length;
@@ -175,8 +174,6 @@ $(window).ready(function () {
   //   console.log("spin start!");
   // });
   spinner.on("spin:end", function (r) {
-    console.log("spin end! -->" + r._index);
-    console.log(data[r._index]);
     Swal.fire({
       position: "center",
       icon: data[r._index].type === "replay" ? "warning" : "success",
