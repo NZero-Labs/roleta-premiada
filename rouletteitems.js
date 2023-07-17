@@ -94,3 +94,8 @@ function handleSaveButton() {
   handleToggleModalForm();
   window.location.reload();
 }
+
+function handleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
+}

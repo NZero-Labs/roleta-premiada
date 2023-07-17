@@ -25,24 +25,32 @@
       <img src="full_logo.png" alt="Logo Amara Nzero">
     </div>
   </div>
-  <div class="flex flex-col justify-start gap-2 items-start p-2">
-    <button onclick="handleToggleModalForm()" type="button"
-      class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-      Alterar
-    </button>
-    <label for="file-upload"
-      class="cursor-pointer rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-      <i class="material-icons text-xs">upload
+  <div class="flex justify-start gap-2 items-start p-2 flex-wrap">
+    <button onclick="handleMenu()" type="button"
+      class="rounded-md bg-white p-1 text-xs font-semibold text-gray-200 shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50">
+      <i class="material-icons text-xs">menu
       </i>
-      Importar Config
-      <input id="file-upload" name="file-upload" type="file" class="sr-only">
-    </label>
-    <button onclick="fileDownloader()"
-      class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-      <i class="material-icons text-xs">download</i>
-      Exportar Config.
     </button>
+    <div id="menu" class="flex justify-start gap-2 items-start hidden flex-wrap">
+      <button onclick="handleToggleModalForm()" type="button"
+        class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-200 shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50">
+        Alterar
+      </button>
+      <label for="file-upload"
+        class="cursor-pointer rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-200 shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50">
+        <i class="material-icons text-xs">upload
+        </i>
+        Importar Config
+        <input id="file-upload" name="file-upload" type="file" class="sr-only">
+      </label>
+      <button onclick="fileDownloader()"
+        class="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-200 shadow-sm ring-1 ring-inset ring-gray-200 hover:bg-gray-50">
+        <i class="material-icons text-xs">download</i>
+        Exportar Config.
+      </button>
+    </div>
   </div>
+
   <div id="modal-form" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <div class="fixed inset-0 z-10 overflow-y-auto">
       <div onclick="handleToggleModalForm()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
