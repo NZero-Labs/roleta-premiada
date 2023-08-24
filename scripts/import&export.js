@@ -49,7 +49,7 @@ function importJson() {
             const result = event.target.result;
             const splittedResult = result.split(",");
             const json = splittedResult[splittedResult.length - 1];
-            window.localStorage.setItem("defaultItems", atob(json));
+            window.localStorage.setItem("defaultItems", decodeURIComponent(escape(window.atob(json))));
           });
           reader.readAsDataURL(file);
         }
