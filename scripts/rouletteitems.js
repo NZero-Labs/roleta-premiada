@@ -1,10 +1,7 @@
 let defaultItems = [
   {
-    text: "text",
-  },
-  {
-    type: "end",
     text: "Não foi dessa vez",
+    type: 'end'
   },
   {
     type: "replay",
@@ -51,7 +48,7 @@ function setItems() {
   removeInputsChangeListener();
   for (let index = 0; index < defaultItems.length; index++) {
     const item = defaultItems[index];
-    if (item.type === "replay" || item.type === "end") continue;
+    if (item.type === "replay") continue;
     const itemDiv = `
     <div class="sm:col-span-full flex justify-between w-full gap-2">
       <div class="w-full">
@@ -62,19 +59,17 @@ function setItems() {
           class="inputs-awards block w-full rounded-md border-0 p-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
       </div>
-      ${
-        index !== 0
-          ? ` <button onclick="handleDeleteButton(${index})" type="button"
+      ${index !== 0
+        ? ` <button onclick="handleDeleteButton(${index})" type="button"
       class="delete rounded-md bg-red-600 p-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"><i class="material-icons">delete</i></button>`
-          : ""
+        : ""
       }
      
-      ${
-        index === defaultItems.length - 3
-          ? `
+      ${index === defaultItems.length - 2
+        ? `
       <button onclick="handleAddButton()" type="button" 
         class="rounded-md bg-indigo-600 p-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="material-icons">add</i></button>`
-          : ""
+        : ""
       }
     </div>
     `;
@@ -88,7 +83,7 @@ function handleDeleteButton(index) {
   setItems();
 }
 function handleAddButton() {
-  defaultItems.splice(defaultItems.length - 2, 0, defaultItem);
+  defaultItems.splice(defaultItems.length - 1, 0, defaultItem);
   setItems();
 }
 getItems();
