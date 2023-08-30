@@ -1,13 +1,36 @@
 let defaultItems = [
-  {
-    text: "Não foi dessa vez",
-    type: 'end'
-  },
-  {
-    type: "replay",
-    text: "Jogue Novamente",
-    ikon: "replay",
-  },
+   {
+  "text": "Porta celular ecológico "
+ },
+ {
+  "text": "Caneta ecológica "
+ },
+ {
+  "text": "Copo ecológico"
+ },
+ {
+  "text": "Porta celular ecológico "
+ },
+ {
+  "text": "Sacochila ecológica"
+ },
+ {
+  "text": "Caneta ecológica "
+ },
+ {
+  "text": "Copo ecológico"
+ },
+ {
+  "text": "Porta celular ecológico "
+ },
+ {
+  "text": "Caneta ecológica "
+ },
+ {
+  "type": "replay",
+  "text": "Jogue Novamente",
+  "ikon": "replay"
+ }
 ];
 const defaultItem = { text: "" };
 function getItems() {
