@@ -24,9 +24,6 @@ let defaultItems = [
   "text": "Porta celular ecológico "
  },
  {
-  "text": "Caneta ecológica "
- },
- {
   "type": "replay",
   "text": "Jogue Novamente",
   "ikon": "replay"
