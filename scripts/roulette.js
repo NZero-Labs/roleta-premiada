@@ -72,7 +72,7 @@ RouletteWheel.prototype.render = function () {
       item.type !== "replay"
         ? item.type !== "end"
           ? colors[i % colors.length]
-          : "#9d9c9c"
+          : "#76bc21"
         : "#ffc000";
     var text = item.text;
     var ikon = item.ikon;
